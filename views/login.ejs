@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Login</h1>
+
+   <% if (locals.verified) { %>
+    <script type="text/javascript">
+        alert("Verification: <%= verified %>");
+    </script>
+<% } %>
+
+<% if (locals.error) { %>
+    <script type="text/javascript">
+        alert("Verification: <%= error %>");
+    </script>
+<% } %>
+    <div>
+        <form method="post" action="/user/login">
+            <label>email name</label>
+            <input type="email" name="email" placeholder="example@gmail.com"/>
+            <label> Password </label>
+            <input type="password" name="password" placeholder="********** "/>
+            <button type ="submit">Submit</button>
+        </form>
+
+        <p>Click to sign up first</p>
+        <a href="http://localhost:8001/signup">
+    <button type="button">Signup</button>
+</a>
+        
+    
+</body>
+</html>
