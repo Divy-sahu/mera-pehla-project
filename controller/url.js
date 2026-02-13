@@ -144,10 +144,11 @@ async function formgenerateurl(req, res) {
 
 
     // Respond with the generated short URL ID
-    return res.render("newhome", {
-      urls: allurls,
-      id:shortID
-    })
+    // return res.render("newhome", {
+    //   urls: allurls,
+    //   id:shortID
+    // })
+    return res.redirect("/");
 
   } catch (err) {
     // If there is a MongoDB error, catch and send an error response
